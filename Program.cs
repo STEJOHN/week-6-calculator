@@ -33,12 +33,20 @@ namespace Calculator
                 {
                     Console.WriteLine(firstNumber / secondNumber);
                 }
+                else
+                {
+                    Console.WriteLine("Please use the following operators:");
+                    Console.WriteLine("- for subtraction");
+                    Console.WriteLine("+ for addition");
+                    Console.WriteLine("/ for division");
+                    Console.WriteLine("* for multiplication");
+                }
             }
 
 
             catch(FormatException)
             {
-                Console.WriteLine("You did not enter a number, please use numbers only!");
+                Console.WriteLine("please use numbers only");
             }
 
 
