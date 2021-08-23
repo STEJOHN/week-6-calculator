@@ -6,33 +6,43 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, enter the first number: ");
-            int firstNumber = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                Console.WriteLine("Hello, enter the first number: ");
+                int firstNumber = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter an operator: ");
-            string op = Console.ReadLine();
+                Console.WriteLine("Enter an operator: ");
+                string op = Console.ReadLine();
 
-            Console.WriteLine("Enter the second number: ");
-            int secondNumber = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter the second number: ");
+                int secondNumber = Convert.ToInt32(Console.ReadLine());
 
-            if (op == "-")
-            {
-                Console.WriteLine(firstNumber - secondNumber);
+                if (op == "-")
+                {
+                    Console.WriteLine(firstNumber - secondNumber);
+                }
+                else if (op == "+")
+                {
+                    Console.WriteLine(firstNumber + secondNumber);
+                }
+                else if (op == "*")
+                {
+                    Console.WriteLine(firstNumber + secondNumber);
+                }
+                else if (op == "/")
+                {
+                    Console.WriteLine(firstNumber / secondNumber);
+                }
             }
-            else if (op == "+")
+
+
+            catch(FormatException)
             {
-                Console.WriteLine(firstNumber + secondNumber);
+                Console.WriteLine("You did not enter a number, please use numbers only!");
             }
-            else if (op == "*")
-            {
-                Console.WriteLine(firstNumber + secondNumber);
-            }
-            else if (op == "/")
-            {
-                Console.WriteLine(firstNumber / secondNumber);
-            }
-            
-            Console.ReadLine();
+
+
+            Console.ReadKey();
         }
     }
 }
