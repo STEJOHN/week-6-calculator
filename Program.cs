@@ -12,24 +12,24 @@ namespace Calculator
                 int firstNumber = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("Enter an operator: ");
-                string op = Console.ReadLine();
+                string operation = Console.ReadLine();
 
                 Console.WriteLine("Enter the second number: ");
                 int secondNumber = Convert.ToInt32(Console.ReadLine());
 
-                if (op == "-")
+                if (operation == "-")
                 {
                     Console.WriteLine($"{firstNumber} - {secondNumber} = " + (firstNumber - secondNumber));
                 }
-                else if (op == "+")
+                else if (operation == "+")
                 {
                     Console.WriteLine($"{firstNumber} + {secondNumber} = " + (firstNumber + secondNumber));
                 }
-                else if (op == "*")
+                else if (operation == "*")
                 {
                     Console.WriteLine($"{firstNumber} * {secondNumber} = " + (firstNumber * secondNumber));
                 }
-                else if (op == "/")
+                else if (operation == "/")
                 {
                     Console.WriteLine($"{firstNumber} / {secondNumber} = " + (firstNumber / secondNumber));
                 }
