@@ -27,6 +27,10 @@ namespace Calculator
             {
                 Console.WriteLine(firstNumber + secondNumber);
             }
+            else if (op == "/")
+            {
+                Console.WriteLine(firstNumber / secondNumber);
+            }
             
             Console.ReadLine();
         }
