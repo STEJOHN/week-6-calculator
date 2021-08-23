@@ -15,6 +15,12 @@ namespace Calculator
             Console.WriteLine("Enter the second number: ");
             int secondNumber = Convert.ToInt32(Console.ReadLine());
 
+            if(op == "-")
+            {
+                Console.WriteLine(firstNumber - secondNumber);
+            }
+            
+            
             Console.ReadLine();
         }
     }
