@@ -8,15 +8,19 @@ namespace Calculator
         {
             try
             {
-                Console.WriteLine("Hello, enter the first number: ");
+                Console.WriteLine("Welcome to Stephen's Calculator v.1\n\n\n\n\n");
+                Console.Write("Hello, enter the first number:  ");
                 int firstNumber = Convert.ToInt32(Console.ReadLine());
+                Console.Write("\n\n\n");
 
-                Console.WriteLine("Enter the second number: ");
+                Console.Write("Enter the second number:  ");
                 int secondNumber = Convert.ToInt32(Console.ReadLine());
+                Console.Write("\n\n\n");
 
-                Console.WriteLine("Enter an operator: ");
+                Console.Write("Enter an operator:  ");
                 string operation = Console.ReadLine();
-         
+                Console.Write("\n\n\n");
+
 
                 if (operation == "-")
                 {
