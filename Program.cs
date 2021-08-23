@@ -9,19 +9,23 @@ namespace Calculator
             try
             {
                 Console.WriteLine("Welcome to Stephen's Calculator v.1\n\n\n\n\n");
+
+                //Reuqesting first number from user
                 Console.Write("Hello, enter the first number:  ");
-                int firstNumber = Convert.ToInt32(Console.ReadLine());
+                double firstNumber = Convert.ToDouble(Console.ReadLine());
                 Console.Write("\n\n\n");
 
+                //Requesting second number from user
                 Console.Write("Enter the second number:  ");
-                int secondNumber = Convert.ToInt32(Console.ReadLine());
+                double secondNumber = Convert.ToDouble(Console.ReadLine());
                 Console.Write("\n\n\n");
 
+                //Requesting operator from user
                 Console.Write("Enter an operator:  ");
                 string operation = Console.ReadLine();
                 Console.Write("\n\n\n");
 
-
+                //Checks if user imputted one of the follwowing: - , + , * , /
                 if (operation == "-")
                 {
                     Console.WriteLine($"{firstNumber} - {secondNumber} = " + (firstNumber - secondNumber));
@@ -38,20 +42,27 @@ namespace Calculator
                 {
                     Console.WriteLine($"{firstNumber} / {secondNumber} = " + (firstNumber / secondNumber));
                 }
+                //If user inputs anything other than available operators, error is called from WrongOperation method
                 else
                 {
+                    //Method is invoked to print operators
                     WrongOperation();
                 }
             }
 
-
-            catch(FormatException)
+            //If user inputs anything but a number, displays error message
+            catch (FormatException)
             {
                 Console.WriteLine("please use numbers only");
             }
+            //If user attempts to divide by zero, displays error message
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Please do not divide my zero.");
+            }
 
-
-        static void WrongOperation()
+            //Created method to print out correct operators if user inputted wrong value
+            static void WrongOperation()
             {
                 Console.WriteLine("Please use the following operators:");
                 Console.WriteLine("- for subtraction");
