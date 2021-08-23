@@ -19,19 +19,19 @@ namespace Calculator
 
                 if (op == "-")
                 {
-                    Console.WriteLine(firstNumber - secondNumber);
+                    Console.WriteLine($"{firstNumber} - {secondNumber} = " + (firstNumber - secondNumber));
                 }
                 else if (op == "+")
                 {
-                    Console.WriteLine(firstNumber + secondNumber);
+                    Console.WriteLine($"{firstNumber} + {secondNumber} = " + (firstNumber + secondNumber));
                 }
                 else if (op == "*")
                 {
-                    Console.WriteLine(firstNumber + secondNumber);
+                    Console.WriteLine($"{firstNumber} * {secondNumber} = " + (firstNumber * secondNumber));
                 }
                 else if (op == "/")
                 {
-                    Console.WriteLine(firstNumber / secondNumber);
+                    Console.WriteLine($"{firstNumber} / {secondNumber} = " + (firstNumber / secondNumber));
                 }
                 else
                 {
