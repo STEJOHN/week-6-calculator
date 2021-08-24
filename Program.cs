@@ -59,6 +59,7 @@ namespace Calculator
                     }
 
 
+
                     //Lets user close/restart app if program ends or wrong input is given
                     Console.WriteLine("\n\nDo you want to exit this program? (y/n)");
                     var status = Console.ReadKey();
