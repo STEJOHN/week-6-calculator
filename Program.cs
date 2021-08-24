@@ -11,7 +11,7 @@ namespace Calculator
                 {
                     Console.WriteLine("Welcome to Stephen's Calculator v.1\n\n\n\n\n");
 
-                    //Reuqesting first number from user
+                    //Reuqests first number from user
                     Console.Write("Hello, enter the first number:  ");
                     decimal firstNumber = Convert.ToDecimal(Console.ReadLine());
                     Console.Write("\n\n\n");
@@ -30,7 +30,7 @@ namespace Calculator
 
 
 
-                    //Checks if user imputted one of the follwowing: - , + , * , /
+                    //Checks if user inputs one of the follwowing: - , + , * , /
                     if (operation == "-")
                     {
                         Console.WriteLine($"Result: {firstNumber} - {secondNumber} = " + (firstNumber - secondNumber));
@@ -54,6 +54,9 @@ namespace Calculator
                         //Method is invoked to print operators
                         OperationList();
                     }
+
+
+                    //Lets user close/restart app if program ends or wrong input is given
                     Console.WriteLine("\n\n Do you want to exit this program? (y/n)");
                     var status = Console.ReadKey();
                     if (status.Key == ConsoleKey.Y)
@@ -62,11 +65,14 @@ namespace Calculator
                     }
                     Console.ReadKey();
                     Console.Clear();
+
+
+
                 }
 
 
 
-                //If user inputs anything but a number, displays error message
+                //If user inputs anything other than number, displays error message
                 catch (FormatException)
                 {
                     Console.WriteLine("please use numbers only");
@@ -94,7 +100,7 @@ namespace Calculator
                     Console.Clear();
                 }
 
-            //Created method to print out correct operators if user inputted wrong value
+            //Created method to print out correct operators if user inputs wrong selection
             static void OperationList()
             {
                 Console.WriteLine("Please use the following operators:");
