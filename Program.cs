@@ -68,9 +68,6 @@ namespace Calculator
                     }
                     Console.ReadKey();
                     Console.Clear();
-
-
-
                 }
 
 
