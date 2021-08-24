@@ -89,7 +89,7 @@ namespace Calculator
                 //If user attempts to divide by zero, displays error message
                 catch (DivideByZeroException)
                 {
-                    Console.WriteLine("Please do not divide my zero.");
+                    Console.WriteLine("Please do not divide by zero.");
                     Console.WriteLine("\n\n Do you want to exit this program? (y/n)");
                     var status = Console.ReadKey();
                     if (status.Key == ConsoleKey.Y)
