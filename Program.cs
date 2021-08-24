@@ -21,32 +21,36 @@ namespace Calculator
                 Console.Write("\n\n\n");
 
                 //Requesting operator from user
-                Console.Write("Enter an operator:  ");
+                Console.WriteLine("Please select an operator: + | - | * | /  ");
+                Console.Write("\n");
+                Console.Write("Selection:  ");
                 string operation = Console.ReadLine();
                 Console.Write("\n\n\n");
+
+                
 
                 //Checks if user imputted one of the follwowing: - , + , * , /
                 if (operation == "-")
                 {
-                    Console.WriteLine($"{firstNumber} - {secondNumber} = " + (firstNumber - secondNumber));
+                    Console.WriteLine($"Result: {firstNumber} - {secondNumber} = " + (firstNumber - secondNumber));
                 }
                 else if (operation == "+")
                 {
-                    Console.WriteLine($"{firstNumber} + {secondNumber} = " + (firstNumber + secondNumber));
+                    Console.WriteLine($"Result: {firstNumber} + {secondNumber} = " + (firstNumber + secondNumber));
                 }
                 else if (operation == "*")
                 {
-                    Console.WriteLine($"{firstNumber} * {secondNumber} = " + (firstNumber * secondNumber));
+                    Console.WriteLine($"Result: {firstNumber} * {secondNumber} = " + (firstNumber * secondNumber));
                 }
                 else if (operation == "/")
                 {
-                    Console.WriteLine($"{firstNumber} / {secondNumber} = " + (firstNumber / secondNumber));
+                    Console.WriteLine($"Result: {firstNumber} / {secondNumber} = " + (firstNumber / secondNumber));
                 }
                 //If user inputs anything other than available operators, error is called from WrongOperation method
                 else
                 {
                     //Method is invoked to print operators
-                    WrongOperation();
+                    OperationList();
                 }
             }
 
@@ -62,7 +66,7 @@ namespace Calculator
             }
 
             //Created method to print out correct operators if user inputted wrong value
-            static void WrongOperation()
+            static void OperationList()
             {
                 Console.WriteLine("Please use the following operators:");
                 Console.WriteLine("- for subtraction");
@@ -71,6 +75,7 @@ namespace Calculator
                 Console.WriteLine("* for multiplication");
             }
 
+            
             Console.ReadKey();
         }
     }
