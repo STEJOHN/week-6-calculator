@@ -9,23 +9,26 @@ namespace Calculator
             while (true)
                 try
                 {
+                    decimal firstNumber = 0, secondNumber = 0;
+                    string operation = "";
+
                     Console.WriteLine("Welcome to Stephen's Calculator v.1\n\n\n\n\n");
 
                     //Reuqests first number from user
                     Console.Write("Hello, enter the first number:  ");
-                    decimal firstNumber = Convert.ToDecimal(Console.ReadLine());
+                    firstNumber = Convert.ToDecimal(Console.ReadLine());
                     Console.Write("\n\n\n");
 
                     //Requesting second number from user
                     Console.Write("Enter the second number:  ");
-                    decimal secondNumber = Convert.ToDecimal(Console.ReadLine());
+                    secondNumber = Convert.ToDecimal(Console.ReadLine());
                     Console.Write("\n\n\n");
 
                     //Requesting operator from user
                     Console.WriteLine("Please select an operator: + | - | * | /  ");
                     Console.Write("\n");
                     Console.Write("Selection:  ");
-                    string operation = Console.ReadLine();
+                    operation = Console.ReadLine();
                     Console.Write("\n\n\n");
 
 
@@ -57,7 +60,7 @@ namespace Calculator
 
 
                     //Lets user close/restart app if program ends or wrong input is given
-                    Console.WriteLine("\n\n Do you want to exit this program? (y/n)");
+                    Console.WriteLine("\n\nDo you want to exit this program? (y/n)");
                     var status = Console.ReadKey();
                     if (status.Key == ConsoleKey.Y)
                     {
@@ -76,7 +79,7 @@ namespace Calculator
                 catch (FormatException)
                 {
                     Console.WriteLine("please use numbers only");
-                    Console.WriteLine("\n\n Do you want to exit this program? (y/n)");
+                    Console.WriteLine("\n\nDo you want to exit this program? (y/n)");
                     var status = Console.ReadKey();
                     if (status.Key == ConsoleKey.Y)
                     {
@@ -90,7 +93,7 @@ namespace Calculator
                 catch (DivideByZeroException)
                 {
                     Console.WriteLine("Please do not divide by zero.");
-                    Console.WriteLine("\n\n Do you want to exit this program? (y/n)");
+                    Console.WriteLine("\n\nDo you want to exit this program? (y/n)");
                     var status = Console.ReadKey();
                     if (status.Key == ConsoleKey.Y)
                     {
