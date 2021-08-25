@@ -2,16 +2,24 @@
 
 namespace Calculator
 {
+
+
+
     class Program
     {
+
+
         static void Main(string[] args)
         {
+
+
+            decimal firstNumber, secondNumber, result = 0;
+            string operation = "";
+
+
             while (true)
                 try
                 {
-                    decimal firstNumber = 0, secondNumber = 0;
-                    string operation = "";
-
                     Console.WriteLine("Welcome to Stephen's Calculator v.1\n\n\n\n\n");
 
                     //Reuqests first number from user
@@ -36,19 +44,23 @@ namespace Calculator
                     //Checks if user inputs one of the follwowing: - , + , * , /
                     if (operation == "-")
                     {
-                        Console.WriteLine($"Result: {firstNumber} - {secondNumber} = " + (firstNumber - secondNumber));
+                        result = Subtract(firstNumber, secondNumber);
+                        ResultOutput(firstNumber, secondNumber, result, operation);
                     }
                     else if (operation == "+")
                     {
-                        Console.WriteLine($"Result: {firstNumber} + {secondNumber} = " + (firstNumber + secondNumber));
+                        result = Add(firstNumber, secondNumber);
+                        ResultOutput(firstNumber, secondNumber, result, operation);
                     }
                     else if (operation == "*")
                     {
-                        Console.WriteLine($"Result: {firstNumber} * {secondNumber} = " + (firstNumber * secondNumber));
+                        result = Multiply(firstNumber, secondNumber);
+                        ResultOutput(firstNumber, secondNumber, result, operation);
                     }
                     else if (operation == "/")
                     {
-                        Console.WriteLine($"Result: {firstNumber} / {secondNumber} = " + (firstNumber / secondNumber));
+                        result = Divide(firstNumber, secondNumber);
+                        ResultOutput(firstNumber, secondNumber, result, operation);
                     }
 
                     //If user inputs anything other than available operators, error is called from WrongOperation method
@@ -112,6 +124,45 @@ namespace Calculator
             }
             Console.ReadKey();
         }
+
+
+
+        //Created methods to calculate input for numbers
+        public static decimal Subtract(decimal firstNumber, decimal secondNumber)
+        {
+            decimal result = firstNumber - secondNumber;
+            return result;
+        }
+
+        public static decimal Add(decimal firstNumber, decimal secondNumber)
+        {
+            decimal result = firstNumber + secondNumber;
+            return result;
+        }
+
+        public static decimal Divide(decimal firstNumber, decimal secondNumber)
+        {
+            decimal result = firstNumber / secondNumber;
+            return result;
+        }
+
+        public static decimal Multiply(decimal firstNumber, decimal secondNumber)
+        {
+            decimal result = firstNumber * secondNumber;
+            return result;
+        }
+
+        //created this method to display output of 1st/2nd number and operation 
+        static void ResultOutput(decimal firstNumber, decimal secondNumber, decimal result, string operation)
+        {
+            Console.WriteLine("Result:  " + firstNumber + " " + operation + " " + secondNumber + " " + " = " + result);
+        }
+
+
     }
+
+
 }
+
+
 
